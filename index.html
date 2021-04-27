@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>United Democratic Alliance - Membership Registration Form</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="/assets/libs/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="/assets/css/uda.css" rel="stylesheet">
+  <link href="/assets/css/weza.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  
+</head>
+
+<body class="bg-white">
+
+  <div class="container col-md-6">
+
+    <div class="card o-hidden border-0 shadow-lg my-5">
+      <div class="card-body p-0">
+        <!-- Nested Row within Card Body -->
+        <div class="row">
+          <!-- <div class="col-lg-5 d-none d-lg-block" style="background:url('/assets/images/sms_sent.svg');background-position: center;
+  background-size: cover;"></div> -->
+          <div class="col-lg-12">
+            <div class="p-5">
+              <div class="text-center">
+		      <a href="/"> <img class="text-center" src="/assets/images/logo.jpg" height="180px"/></a>
+                    <hr>
+                <h1 class="h3 text-gray-900 mb-4 text-center"> Membership Registration Form</h1>
+                <h4>Join the Hustler Movement!</h4>
+                <br>
+              </div>
+              <form class="weza-form" action="/signup/" data-parsley-validate="" loader="true" method="POST">
+                <div class="form-group row">
+                  <div class="col-sm-12 mb-3 mb-sm-0">
+                    <label>ID Number <b class="text-danger">*</b></label>
+                    <input type="number" class="form-control form-control-user" minlength="7" maxlength="8" name="id_number" id="id_number" placeholder="ID Number" data-parsley-required="true">
+                  </div>
+                </div>
+
+		<input type="hidden" name="csrf-token" value="">
+
+                <br>
+                <div class="form-group row">
+                  <div class="col-sm-12 mb-3 mb-sm-0">
+                    <label>Names <b class="text-danger">*</b></label>
+                    <input type="text" class="form-control form-control-user" minlength="5" name="names" id="names" placeholder="Names" data-parsley-required="true">
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                  <label>Phone Number <b class="text-danger">*</b> e.g 0712345678</label>
+                  <!-- <input type="tel" class="form-control form-control-user" id="phone" name="phone" placeholder="Phone Number" data-parsley-required="true"> -->
+                  <input type="number" name="phone"  placeholder="0721xxxxxx" minlength="10" maxlength="10" class="form-control" required/>
+                </div>
+
+                <br>
+
+                <div class="form-group row">
+                  <div class="col-sm-12 mb-3 mb-sm-0">
+                    <label>E-mail address (Optional)</label>
+                    <input type="email" class="form-control form-control-user" name="email" id="email" placeholder="Email address" >
+                  </div>
+                </div>
+
+                <br>
+
+                <input type="hidden" name="referral" value="0">
+
+                <div class="form-group row">
+                  <div class="col-sm-12 mb-3 mb-sm-0">
+                    <label>County of Residence / Voting if already a registered voter <b class="text-danger">*</b></label>
+                    <select class="form-control" onChange="getConstituencies(this.value);" name="county" id="county" data-parsley-required="true">
+                      <option value="1">-Select County-</option>
+                                            <option value="1">001 - Mombasa</option>
+                                            <option value="2">002 - Kwale</option>
+                                            <option value="3">003 - Kilifi</option>
+                                            <option value="4">004 - Tana River</option>
+                                            <option value="5">005 - Lamu</option>
+                                            <option value="6">006 - Taita Taveta</option>
+                                            <option value="7">007 - Garissa</option>
+                                            <option value="8">008 - Wajir</option>
+                                            <option value="9">009 - Mandera</option>
+                                            <option value="10">010 - Marsabit</option>
+                                            <option value="11">011 - Isiolo</option>
+                                            <option value="12">012 - Meru</option>
+                                            <option value="13">013 - Tharaka - Nithi</option>
+                                            <option value="14">014 - Embu</option>
+                                            <option value="15">015 - Kitui</option>
+                                            <option value="16">016 - Machakos</option>
+                                            <option value="17">017 - Makueni</option>
+                                            <option value="18">018 - Nyandarua</option>
+                                            <option value="19">019 - Nyeri</option>
+                                            <option value="20">020 - Kirinyaga</option>
+                                            <option value="21">021 - Murang'a</option>
+                                            <option value="22">022 - Kiambu</option>
+                                            <option value="23">023 - Turkana</option>
+                                            <option value="24">024 - West Pokot</option>
+                                            <option value="25">025 - Samburu</option>
+                                            <option value="26">026 - Trans Nzoia</option>
+                                            <option value="27">027 - Uasin Gishu</option>
+                                            <option value="28">028 - Elgeyo/Marakwet</option>
+                                            <option value="29">029 - Nandi</option>
+                                            <option value="30">030 - Baringo</option>
+                                            <option value="31">031 - Laikipia</option>
+                                            <option value="32">032 - Nakuru</option>
+                                            <option value="33">033 - Narok</option>
+                                            <option value="34">034 - Kajiado</option>
+                                            <option value="35">035 - Kericho</option>
+                                            <option value="36">036 - Bomet</option>
+                                            <option value="37">037 - Kakamega</option>
+                                            <option value="38">038 - Vihiga</option>
+                                            <option value="39">039 - Bungoma</option>
+                                            <option value="40">040 - Busia</option>
+                                            <option value="41">041 - Siaya</option>
+                                            <option value="42">042 - Kisumu</option>
+                                            <option value="43">043 - Homa Bay</option>
+                                            <option value="44">044 - Migori</option>
+                                            <option value="45">045 - Kisii</option>
+                                            <option value="46">046 - Nyamira</option>
+                                            <option value="47">047 - Nairobi City</option>
+                                            <option value="48">048 - Diaspora</option>
+                                          </select>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="form-group row">
+                  <div class="col-sm-12 mb-3 mb-sm-0">
+                    <label>Constituency of Residence / Voting if already a registered voter <b class="text-danger">*</b></label>
+                    <select class="form-control" name="constituency" onChange="getWards(this.value);" id="constituency" data-parsley-required="true">
+                      <option value="" disabled selected>-Select Constituency-</option>
+                      
+                    </select>
+                  </div>
+                </div>
+                <br>
+
+                <div class="form-group row">
+                  <div class="col-sm-12 mb-3 mb-sm-0">
+                    <label>Ward of Residence / Voting if already a registered voter <b class="text-success">(Optional)</b></label>
+                    <select class="form-control" name="ward" id="ward">
+                     
+                      <option value="" disabled selected>-Select Ward-</option>
+                      
+                    </select>
+                  </div>
+                </div>
+                <br>
+
+                
+		<div class="form-group">
+                    <br>
+		   
+		    <label for="activities"><input type="checkbox" id="activities" name="activities" value="activities"> I want to participate in UDA party activities. (Optional)</label><br>
+		    
+                </div>
+
+		<div class="form-group">
+                    <br>
+
+                  <label for="membership"><input type="checkbox" id="membership" name="membership" value="membership" required> <span class="text-danger">*</span> I agree to UDA Party's <a href="/terms/" target="_blank"> Terms & Conditions</a>.</label><br>
+                </div>
+
+	
+
+                <button type="submit" class="btn btn-lg btn-success btn-user btn-block">
+                  <i class="fa fa-check-circle"></i> Register Now
+                </button>
+		<br>
+		<h5 class="text-center">or</h5>
+		<br>
+		<a href="/verify/" class="btn btn-lg btn-info btn-user btn-block">
+                  <i class="fa fa-check-square"></i> 
+		  Verify Registration
+                </a>
+                <hr>
+                <!-- <h1 class="h6 text-success mb-4 text-center"> Membership Counter : 274,388</h1> -->
+                <hr>
+              </form>
+              <p class="text-center"> All Rights Reserved | United Democratic Alliance (UDA) | Copyright &copy; 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Bootstrap core JavaScript-->
+  <script src="/assets/libs/jquery/jquery.min.js"></script>
+  <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+<script src="/assets/libs/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js" integrity="sha512-cJMgI2OtiquRH4L9u+WQW+mz828vmdp9ljOcm/vKTQ7+ydQUktrPVewlykMgozPP+NUBbHdeifE6iJ6UVjNw5Q==" crossorigin="anonymous"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="/assets/js/uda.min.js"></script>
+<script src="/assets/js/weza.js"></script>
+<script src="/assets/js/app.js"></script>
+</body>
+
+</html>
+
